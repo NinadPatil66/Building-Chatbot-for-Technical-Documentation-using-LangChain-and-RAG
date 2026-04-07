@@ -6,6 +6,16 @@ Create a context-aware chatbot which can explain dashboard warnings and recommen
 # Description -
 A well-known car manufacturer is looking at implementing LLMs into vehicles to provide guidance to drivers. Integrate a car manual with an LLM to create a context-aware chatbot. This context-aware LLM can be hooked up to a text-to-speech software to read the model's response aloud. Integrate several pages from a car manual that contains car warning messages and their meanings and recommended actions. This particular manual, is stored as an HTML file.
 
+# Approach - 
+1) Import the required packages.
+2) Load the HTML file.
+3) Initialize the LLM and embedding model.
+4) Initialize the text splitter (with chunk size and chunk overlap)
+5) Split the documents into chunks
+6) Convert chunks into embeddings and insert it into the vector DB.
+7) Setup vector store as retriever
+8) Define the RAG prompt
+
 # Libraries - 
 1) from langchain_core.prompts import ChatPromptTemplate 
 2) from langchain_openai import ChatOpenAI, OpenAIEmbeddings
